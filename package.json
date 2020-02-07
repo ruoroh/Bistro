@@ -1,0 +1,32 @@
+{
+  "name": "bistro",
+  "version": "1.0.0",
+  "description": "A simple POS API",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./server.js",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruoroh/Bistro.git"
+  },
+  "author": "Wanjiru Ruoroh.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruoroh/Bistro/issues"
+  },
+  "homepage": "https://github.com/ruoroh/Bistro#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pg": "^7.18.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.1",
+    "nodemon": "^2.0.2"
+  }
+}
