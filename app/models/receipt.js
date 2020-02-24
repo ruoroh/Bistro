@@ -4,7 +4,16 @@ module.exports = (sequelize, DataTypes) => {
     transaction_date: DataTypes.DATE
   }, {});
   receipt.associate = function(models) {
-    // associations can be defined here
+    receipt.belongsTo(models.user, {
+      foreignKey: {
+        name: 'userId',
+        type: DataTypes.INTEGER,
+        as: 'user'
+      }
+    });
+    receipt.hasMany(models.product_receipt, {
+      foreignKey: 'receiptNumber'
+    });
   };
   return receipt;
 };
