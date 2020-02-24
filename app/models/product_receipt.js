@@ -5,7 +5,12 @@ module.exports = (sequelize, DataTypes) => {
     total_amount: DataTypes.INTEGER
   }, {});
   product_receipt.associate = function(models) {
-    // associations can be defined here
+    product_receipt.belongsTo(models.product, {
+      foreignKey: 'productId'
+    });
+    product_receipt.belongsTo(models.receipt, {
+      foreignKey: 'receiptNumber'
+    });
   };
   return product_receipt;
 };
