@@ -8,7 +8,9 @@ module.exports = (sequelize, DataTypes) => {
     image: DataTypes.STRING
   }, {});
   product.associate = function(models) {
-    // associations can be defined here
+    product.hasMany(models.product_invoice, models.product_receipt, {
+      foreignKey: 'productId'
+    });
   };
   return product;
 };
